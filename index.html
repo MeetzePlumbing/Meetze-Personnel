@@ -2,69 +2,59 @@
 <html lang="en"> 
 
 <head> 
-	<meta charset="UTF-8" /> 
-	<meta name="viewport"
-		content="width=device-width, initial-scale=1.0" /> 
-	<link rel="stylesheet" href="style.css" /> 
-	<title>Employee Database Management System</title> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="style.css" /> 
+    <title>Employee Database Management System</title> 
 </head> 
 
 <body> 
-	<div id="app"> 
-		<header class="header"> 
-			<h1>Employee Database Management</h1> 
-			<button class="createEmployee"> 
-				Add Employee 
-			</button> 
-		</header> 
+    <div id="app"> 
+        <header class="header"> 
+            <h1>Employee Database Management</h1> 
+            <button class="createEmployee">Add Employee</button> 
+        </header> 
 
-		<div class="employees"> 
-			<div class="employees__names"> 
-				<span class="employees__names--title"> 
-					Employee List 
-				</span> 
-				<div class="employees__names--list"></div> 
-			</div> 
-			<div class="employees__single"> 
-				<div class="employees__single--title"> 
-					Employee Information 
-				</div> 
-				<div class="employees__single--info"></div> 
-			</div> 
-		</div> 
-		<!-- Add Employee Code - START -->
-		<div class="addEmployee"> 
-			<form class="addEmployee_create"> 
-				Add a new Employee 
-				<div> 
-					<input type="text" name="firstName"
-						placeholder="First Name" required /> 
-					<input type="text" name="lastName"
-						placeholder="Last Name" required /> 
-				</div> 
-				<input type="text" name="imageUrl"
-					placeholder="Image URL (Optional)" /> 
-				<input type="email" name="email"
-					placeholder="Email" required /> 
-				<input type="number" name="contactNumber"
-					placeholder="Contact" required /> 
-				<input type="number" name="salary"
-					placeholder="Salary" required /> 
-				<input type="text" name="address"
-					placeholder="Address" required /> 
-				<input type="date" name="dob"
-					placeholder="Date of Birth"
-					class="addEmployee_create--dob"
-					required /> 
-				<input type="submit"
-					class="addEmployee_create--submit"
-					value="Submit" /> 
-			</form> 
-		</div> 
-		<!-- Add Employee Code - END -->
-	</div> 
+        <div class="employees"> 
+            <div class="employees__names"> 
+                <span class="employees__names--title">Employee List</span> 
+                <div class="employees__names--list"></div> 
+            </div> 
+            <div class="employees__single"> 
+                <div class="employees__single--title">Employee Information</div> 
+                <div class="employees__single--info"></div> 
+            </div> 
+        </div> 
 
-	<script src="script.js"></script> 
+        <!-- Add Employee Form - START -->
+        <div class="addEmployee"> 
+            <form class="addEmployee_create"> 
+                <h2>Add a new Employee</h2> 
+                <div> 
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required /> 
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required /> 
+                </div> 
+                <label for="imageUrl">Image URL (Optional)</label>
+                <input type="text" id="imageUrl" name="imageUrl" /> 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required /> 
+                <label for="contactNumber">Contact Number</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required /> 
+                <label for="salary">Salary</label>
+                <input type="number" id="salary" name="salary" required /> 
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required /> 
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" class="addEmployee_create--dob" required /> 
+                <input type="submit" class="addEmployee_create--submit" value="Submit" /> 
+            </form> 
+        </div> 
+        <!-- Add Employee Form - END -->
+    </div> 
+
+    <script src="script.js"></script> 
 </body> 
 
 </html>
